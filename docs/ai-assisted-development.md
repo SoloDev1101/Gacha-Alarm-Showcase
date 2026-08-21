@@ -58,16 +58,13 @@ sync queue behavior — by proposing alternatives and explaining trade-offs.
 
 ## What This Means for Code Reviewers
 
-AI-assisted development does not mean AI-authored code. The architecture,
-the key abstractions, and the engineering judgment throughout this codebase
-reflect deliberate decisions made by the developer — decisions that AI tools
-cannot make: choosing what to build, how to structure it, what trade-offs to
-accept, and why.
+AI-assisted development was a core part of this project. AI generated implementation drafts, explored alternatives, explained unfamiliar APIs, and assisted with debugging.
 
-The developer's ownership is most visible in the files listed in
-[`README.md § Code Highlights for Reviewers`](../README.md#-code-highlights-for-reviewers):
-these represent the hardest problems in the codebase, where generated code
-alone would not have produced a working result.
+The developer remained responsible for defining what to build, evaluating proposed solutions, making architectural and technical decisions, validating behavior against the actual system, and accepting or rejecting generated output.
+
+In particular, AI-generated suggestions were not treated as authoritative. They were reviewed, modified, tested, and sometimes rejected when they conflicted with the product requirements, runtime behavior, or architectural constraints.
+
+The developer's ownership is most visible in the files listed in README.md § Code Highlights for Reviewers. These files represent areas where architecture, integration, debugging, and correctness were significant parts of the work.
 
 ---
 
