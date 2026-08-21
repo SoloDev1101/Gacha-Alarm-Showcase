@@ -1,3 +1,4 @@
+docs/
 # AI-Assisted Development
 
 This document describes how AI tools were used during the development of
