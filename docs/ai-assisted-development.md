@@ -64,7 +64,8 @@ The developer remained responsible for defining what to build, evaluating propos
 
 In particular, AI-generated suggestions were not treated as authoritative. They were reviewed, modified, tested, and sometimes rejected when they conflicted with the product requirements, runtime behavior, or architectural constraints.
 
-The developer's ownership is most visible in the files listed in README.md § Code Highlights for Reviewers. These files represent areas where architecture, integration, debugging, and correctness were significant parts of the work.
+The developer's ownership is most visible in the files listed in[`README.md § Code Highlights for Reviewers`](../README.md#-code-highlights-for-reviewers):
+These files represent areas where architecture, integration, debugging, and correctness were significant parts of the work.
 
 ---
 
