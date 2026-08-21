@@ -30,7 +30,7 @@ Every on-time wake-up is rewarded. Every character has a unique personality and 
 - **D3 — Dynamic Dialogue Delivery**: Your companion calls you awake with dialogue matching their personality (Tsundere, Friendly, Evil, Soft...). The dialogue escalates in intensity based on how many times you've snoozed.
 - **Ultra-Fast Boot**: The ringing screen launches even when the phone is locked, prioritizing display speed above everything else.
 - **Stale Alarm Recovery**: Automatically restores app state if an alarm gets "stuck" for more than 5 minutes.
-- **Wake-up Rewards**: Dismiss on time → earn gacha tickets (up to 6/day). Affinity points are granted once per day via a cloud-verified RPC call to prevent abuse.
+- **Wake-up Rewards**: Dismiss on time → earn gacha tickets (up to 6/day). Affinity points are granted once per day with server-side validation.
 - **Snooze Limit**: Snooze is capped at 2 times per alarm. After that, the alarm escalates to the "Ignored" event type, triggering a different character dialogue.
 
 ### 🎲 Gacha Summoning System
@@ -41,7 +41,7 @@ Every on-time wake-up is rewarded. Every character has a unique personality and 
 
 ### ⚡ Evolution & Affinity
 - **3 Evolution Phases**: Base → Phase 2 → Phase 3 / Pixel / Transcendent.
-- **Affinity System**: Unlocks over time by waking up on time each day. Affinity gains are validated server-side (Supabase RPC) to prevent cheating.
+- **Affinity System**: Unlocks over time by waking up on time each day. Affinity gains are validated server-side.
 - Each evolution phase unlocks new **Skins**, unique **ringtones**, and exclusive **dialogue sets**.
 
 ### 🌳 World Tree
@@ -246,7 +246,7 @@ If you're an engineer or recruiter reviewing this project, the table below point
 | [`lib/services/alarm_snapshot_service.dart`](./lib/services/alarm_snapshot_service.dart) | **Snapshot pattern** — pre-bakes alarm + dialogue data into `SharedPreferences` so the ringing screen can render without waiting for Hive or network |
 | [`lib/services/alarm_command_executor.dart`](./lib/services/alarm_command_executor.dart) | **Command pattern** for dismiss/snooze — decouples alarm actions from UI and makes them callable from both the app and Wear OS |
 | [`lib/services/wearable_sync_service.dart`](./lib/services/wearable_sync_service.dart) | **Wear OS MethodChannel bridge** — two-way sync of alarms and D3 dialogue to a smartwatch companion app |
-| [`lib/services/ringing_reward_service.dart`](./lib/services/ringing_reward_service.dart) | **Server-side anti-cheat** — affinity gains are validated through a Supabase RPC call; the local date is only written after cloud approval to prevent offline exploitation |
+| [`lib/services/ringing_reward_service.dart`](./lib/services/ringing_reward_service.dart) | **Reward integrity** — orchestrates wake-up rewards with server-side validation to ensure consistency |
 | [`lib/services/offline_sync_service.dart`](./lib/services/offline_sync_service.dart) | **Offline-first write queue** — queues failed sync operations and flushes them automatically when connectivity is restored |
 | [`lib/services/gacha_rng_service.dart`](./lib/services/gacha_rng_service.dart) | **Weighted random engine** — implements rank-weighted pulls and the SR++ shard accumulation system (3 shards to unlock) |
 | [`lib/services/permission_assistant.dart`](./lib/services/permission_assistant.dart) | **Per-OEM permission handling** — detects device manufacturer and deep-links into the correct battery optimization settings for Xiaomi, Samsung, Oppo, and Vivo |
