@@ -253,6 +253,21 @@ If you're an engineer or recruiter reviewing this project, the table below point
 
 ---
 
+## 🤖 AI-Assisted Development
+
+AI was extensively used throughout the development process for implementation, debugging, code exploration, and iteration.
+
+I remained responsible for:
+- Product requirements and scope
+- Architecture and technical decisions
+- Evaluating and validating AI-generated solutions
+- Debugging and root-cause analysis
+- Final implementation decisions
+
+→ See [`docs/ai-assisted-development.md`](./docs/ai-assisted-development.md) for a detailed breakdown.
+
+---
+
 ## 🤝 Contributing
 
 This project is under independent development. If you'd like to report a bug or suggest a feature, please open an **Issue** on GitHub.
