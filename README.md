@@ -10,6 +10,7 @@
 [![Hive](https://img.shields.io/badge/Hive-Local%20DB-FFD700)](https://pub.dev/packages/hive)
 [![Version](https://img.shields.io/badge/Version-1.0.2%2B59-blueviolet)](./pubspec.yaml)
 [![Platform](https://img.shields.io/badge/Platform-Android-brightgreen?logo=android)](https://android.com)
+[![Google Play](https://img.shields.io/badge/Google%20Play-Download-414141?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.solodev.gacha_alarm)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](#-license)
 
 </div>
@@ -135,48 +136,37 @@ gacha_alarm/
 
 ---
 
-## 🚀 Getting Started
+## 📲 Download
 
-### Prerequisites
+<a href="https://play.google.com/store/apps/details?id=com.solodev.gacha_alarm">
+  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="60"/>
+</a>
 
-- **Flutter SDK**: `>=3.1.0 <4.0.0`
-- **Dart SDK**: `>=3.1.0 <4.0.0`
-- **Android Studio** or **VS Code** with the Flutter extension
-- **Android**: API Level 21+ (Android 5.0+)
+Gacha Alarm is publicly available on the Google Play Store.
 
-### Setup
+---
 
-**1. Clone the repository**
+## 🛠️ Build from Source
+
+> For contributors and reviewers who want to run the project locally.
+
+**Requirements:** Flutter SDK `>=3.1.0`, Android Studio or VS Code, Android API 21+
+
 ```bash
+# 1. Clone
 git clone https://github.com/SoloDev1101/Gacha-Alarm.git
 cd gacha_alarm
-```
 
-**2. Create a `.env` file** in the project root:
-```env
+# 2. Create .env in project root
 SUPABASE_URL=your_supabase_project_url
 SUPABASE_ANON_KEY=your_supabase_anon_key
-```
 
-**3. Install dependencies**
-```bash
+# 3. Install & generate
 flutter pub get
-```
-
-**4. Generate Hive TypeAdapters**
-```bash
 dart run build_runner build --delete-conflicting-outputs
-```
 
-**5. Run the app**
-```bash
+# 4. Run
 flutter run
-```
-
-### Build Release APK
-
-```bash
-flutter build apk --release
 ```
 
 ---
