@@ -1,5 +1,4 @@
-docs/
-# AI-Assisted Development
+# docs/AI-Assisted Development
 
 This document describes how AI tools were used during the development of
 Gacha Alarm, and what the developer was responsible for at each stage.
